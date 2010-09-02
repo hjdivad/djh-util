@@ -1,0 +1,2 @@
+module DjhUtil::Aliases
+end

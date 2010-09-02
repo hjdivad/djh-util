@@ -8,12 +8,11 @@ Dir[ 'lib/tasks/**/*' ].each{ |l| require l }
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    # TODO 1: name
-    gem.name = "TODO: name"
-    gem.summary = %Q{TODO: description}
-    gem.description = %Q{TODO: description}
-    gem.email = "TODO: name @hjdivad.com"
-    gem.homepage = "http://github.com/hjdivad/TODO: name"
+    gem.name = "djh-util"
+    gem.summary = %Q{A handful of David's personal utilities.}
+    gem.description = %Q{A handful of David's personal utilities, in a similar vein to facets.}
+    gem.email = "djh-util@hjdivad.com"
+    gem.homepage = "http://github.com/hjdivad/djh-util"
     gem.authors = ["David J. Hamilton"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
     gem.add_development_dependency "yard", ">= 0"
