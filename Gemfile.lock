@@ -1,18 +1,29 @@
+GIT
+  remote: git://github.com/hjdivad/project.git
+  revision: 3fb38fb9103371c578d1abe17b5394a848618ee7
+  specs:
+    project (0.2.0.2)
+      trollop
+
 GEM
   remote: http://rubygems.org/
   specs:
     diff-lcs (1.1.2)
-    rspec (2.0.0.beta.20)
-      rspec-core (= 2.0.0.beta.20)
-      rspec-expectations (= 2.0.0.beta.20)
-      rspec-mocks (= 2.0.0.beta.20)
-    rspec-core (2.0.0.beta.20)
-    rspec-expectations (2.0.0.beta.20)
+    rspec (2.0.0)
+      rspec-core (= 2.0.0)
+      rspec-expectations (= 2.0.0)
+      rspec-mocks (= 2.0.0)
+    rspec-core (2.0.0)
+    rspec-expectations (2.0.0)
       diff-lcs (>= 1.1.2)
-    rspec-mocks (2.0.0.beta.20)
+    rspec-mocks (2.0.0)
+      rspec-core (= 2.0.0)
+      rspec-expectations (= 2.0.0)
+    trollop (1.16.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  project!
   rspec (>= 2.0.0.beta.17)

@@ -1,5 +1,6 @@
+# encoding: utf-8
 
-#TODO 1: organize
+#TODO 2: organize
 require 'active_support/concern'
 require 'djh_util'
 
@@ -17,12 +18,20 @@ module DjhUtil::Development::Introspection::Object
   end
 
   module InstanceMethods
-    def methods_of_interest
-      (methods - Object.instance_methods).sort
+    def methods_of_interest search_dist=1
+      total     = []
+      order     = []
+      self.class.ancestors.reverse.inject( {} ) do |moi_hash, klass|
+        moi_hash[ klass ] = (klass.instance_methods - total).sort
+        total             += moi_hash[ klass ]
+        order.unshift     klass
+
+        moi_hash
+      end.select{ |k,v| order.take( search_dist ).include? k }
     end
 
     def mg  *args, &block
-      methods_of_interest.grep *args, &block
+      methods.grep    *args, &block
     end
 
     def eigenclass

@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module DjhUtil::Extensions::Kernel
   extend ActiveSupport::Concern
 
