@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["David J. Hamilton"]
-  s.date = %q{2010-09-10}
+  s.date = %q{2010-09-17}
   s.description = %q{A handful of David's personal utilities, in a similar vein to facets.}
   s.email = %q{djh-util@hjdivad.com}
   s.extra_rdoc_files = [
@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
      ".vim/plugin/.gitignore",
      ".vimproject",
      "Gemfile",
+     "Gemfile.lock",
      "History.rdoc",
      "LICENSE",
      "README.rdoc",
@@ -36,6 +37,10 @@ Gem::Specification.new do |s|
      "lib/djh_util.rb",
      "lib/djh_util/debugging.rb",
      "lib/djh_util/development.rb",
+     "lib/djh_util/extensions.rb",
+     "lib/djh_util/extensions/hash.rb",
+     "lib/djh_util/extensions/kernel.rb",
+     "lib/djh_util/method_conflict_resolution.rb",
      "pkg/djh-util-0.1.0.0.gem",
      "spec/spec_helper.rb"
   ]
@@ -53,18 +58,12 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<rspec>, [">= 1.2.9"])
-      s.add_development_dependency(%q<yard>, [">= 0"])
-      s.add_development_dependency(%q<cucumber>, [">= 0"])
+      s.add_development_dependency(%q<rspec>, [">= 2.0.0.beta.17"])
     else
-      s.add_dependency(%q<rspec>, [">= 1.2.9"])
-      s.add_dependency(%q<yard>, [">= 0"])
-      s.add_dependency(%q<cucumber>, [">= 0"])
+      s.add_dependency(%q<rspec>, [">= 2.0.0.beta.17"])
     end
   else
-    s.add_dependency(%q<rspec>, [">= 1.2.9"])
-    s.add_dependency(%q<yard>, [">= 0"])
-    s.add_dependency(%q<cucumber>, [">= 0"])
+    s.add_dependency(%q<rspec>, [">= 2.0.0.beta.17"])
   end
 end
 

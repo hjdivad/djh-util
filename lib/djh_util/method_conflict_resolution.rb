@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module DjhUtil::MethodConflictResolution
   # TODO 1: only do this if necessary, i.e. if there IS a conflict
   # TODO 2: doc, note deficiencies
