@@ -11,9 +11,10 @@ __DIR__ = File.dirname( __FILE__ )
 ActiveSupport::Dependencies.autoload_paths << __DIR__ unless
   ActiveSupport::Dependencies.autoload_paths.include? __DIR__
 
-module DjhUtil
-end
+module DjhUtil; end
 
 Kernel.module_eval{ include DjhUtil::Extensions::Kernel }
 Hash.class_eval{    include DjhUtil::Extensions::Hash }
+String.class_eval{  include DjhUtil::Extensions::String }
+Object.class_eval{  include DjhUtil::Extensions::Object }
 
