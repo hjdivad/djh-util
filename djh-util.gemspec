@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["David J. Hamilton"]
-  s.date = %q{2010-10-13}
+  s.date = %q{2010-10-21}
   s.description = %q{A handful of David's personal utilities, in a similar vein to facets.}
   s.email = %q{djh-util@hjdivad.com}
   s.extra_rdoc_files = [
@@ -41,6 +41,8 @@ Gem::Specification.new do |s|
      "lib/djh_util/extensions.rb",
      "lib/djh_util/extensions/hash.rb",
      "lib/djh_util/extensions/kernel.rb",
+     "lib/djh_util/extensions/object.rb",
+     "lib/djh_util/extensions/string.rb",
      "lib/djh_util/method_conflict_resolution.rb",
      "spec/spec_helper.rb"
   ]
